@@ -4,6 +4,7 @@ from tensorflow.python.keras.models import Model
 from tensorflow.python.keras.optimizers import RMSprop
 from tensorflow.python.keras.preprocessing.image import ImageDataGenerator
 from PIL import Image
+import matplotlib.pyplot as plt
 
 def create_model():
     # Our input feature map is 150x150x3: 150x150 for the image pixels, and 3 for
@@ -31,6 +32,9 @@ def create_model():
     # Create a fully connected layer with ReLU activation and 512 hidden units
     x = layers.Dense(512, activation='relu')(x)
 
+    # Add a dropout rate of 0.5
+    x = layers.Dropout(0.5)(x)
+
     # Create output layer with a single node and sigmoid activation
     output = layers.Dense(1, activation='sigmoid')(x)
 
@@ -45,7 +49,7 @@ def create_model():
                   metrics=['acc'])
     return model
 
-def evaluate():
+def evaluate(history):
     # Retrieve a list of accuracy results on training and test data
     # sets for each training epoch
     acc = history.history['acc']
@@ -71,11 +75,13 @@ def evaluate():
     plt.plot(epochs, val_loss)
     plt.title('Training and validation loss')
 
+    plt.show()
+
 def main():
     model = create_model()
 
     current_dir = os.path.dirname(__file__)
-    author = 'all_authors'
+    author = 'SigComp11'
     training_dir = os.path.join(current_dir, 'data/training/', author)
     validation_dir = os.path.join(current_dir, 'data/validation/', author)
 
@@ -106,6 +112,8 @@ def main():
       validation_data=validation_generator,
       validation_steps=50,  # 1000 images = batch_size * steps
       verbose=2)
+
+    evaluate(history)
 
 
 if __name__ == '__main__':

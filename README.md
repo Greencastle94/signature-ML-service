@@ -16,7 +16,7 @@ Coming soon...
 - Pillow
 
 ## Dataset
-The dataset used was gotten from the ICDAR 2009 Signature Verification Competition (SigComp2009).
-More detais are available [here](http://www.iapr-tc11.org/mediawiki/index.php?title=ICDAR_2009_Signature_Verification_Competition_(SigComp2009)).
+The dataset used was gotten from the ICDAR 2011 Signature Verification Competition (SigComp2011).
+More detais are available [here](http://iapr-tc11.org/mediawiki/index.php/ICDAR_2011_Signature_Verification_Competition_%28SigComp2011%29).
 
 ---
