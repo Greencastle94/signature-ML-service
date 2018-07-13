@@ -7,20 +7,28 @@ def create_model():
     # the three color channels: R, G, and B
     img_input = layers.Input(shape=(150, 150, 3))
 
-    # Flatten feature map to a 1-dim tensor so we can add fully connected layers
-    x = layers.Flatten()(img_input)
+    # First convolution extracts 128 filters that are 5x5
+    # Convolution is followed by max-pooling layer with a 2x2 window
+    x = layers.Conv2D(128, 5, activation='relu')(img_input)
+    x = layers.MaxPooling2D(2)(x)
 
-    # Create a fully connected layer with Sigmoid activation and 500 hidden units
-    x = layers.Dense(500, activation='sigmoid')(x)
-
-    # Create a second fully connected layer with Sigmoid activation and 500 hidden units
-    x = layers.Dense(500, activation='sigmoid')(x)
-
-    # Add a dropout rate of 0.5
     x = layers.Dropout(0.5)(x)
 
+    # Flatten feature map to a 1-dim tensor so we can add fully connected layers
+    x = layers.Flatten()(x)
+
+    x = layers.Dense(96, activation='relu')(x)
+
+    # Add a dropout rate of 0.5
+    x = layers.Dropout(0.25)(x)
+
+    x = layers.Dense(54, activation='relu')(x)
+
+    # Add a dropout rate of 0.5
+    x = layers.Dropout(0.25)(x)
+
     # Create output layer with a single node and sigmoid activation
-    output = layers.Dense(1, activation='sigmoid')(x)
+    output = layers.Dense(1, activation='softmax')(x)
 
     # Create model:
     # input = input feature map
@@ -29,7 +37,7 @@ def create_model():
     model = Model(img_input, output)
 
     model.compile(loss='binary_crossentropy',
-                  optimizer=RMSprop(lr=0.01),
+                  optimizer=RMSprop(lr=0.001),
                   metrics=['acc'])
 
     # model.summary()

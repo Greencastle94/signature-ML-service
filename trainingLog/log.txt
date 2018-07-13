@@ -165,3 +165,157 @@ Validation_loss: 5.9303
 Training_acc: 0.9937
 Validation_acc: 0.5528
 Notes: 
+
+120718-01
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = 2
+Validation_steps = 2
+Epochs = 15
+Model: CNN
+Other: 021
+Training_loss: 0.1314
+Validation_loss: 0.5703
+Training_acc: 0.9583
+Validation_acc: 0.9167
+Notes: 
+
+120718-02
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = 2
+Validation_steps = 2
+Epochs = 15
+Model: CNN
+Other: 024
+Training_loss: 0.4002
+Validation_loss: 0.7446
+Training_acc: 0.8750
+Validation_acc: 0.6250
+Notes: 
+
+120718-03
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = 2
+Validation_steps = 2
+Epochs = 15
+Model: CNN
+Other: 029
+Training_loss: 0.4681
+Validation_loss: 0.8290
+Training_acc: 0.9129
+Validation_acc: 0.6250
+Notes: 
+
+130718-01
+Training_batch_size = 20
+Validation_batch_size = 20
+Training_steps = 96
+Validation_steps = 18
+Epochs = 15
+Model: CNN
+Other: SigComp11
+Training_loss: 0.2879
+Validation_loss: 3.0547
+Training_acc: 0.8792
+Validation_acc: 0.5556
+Notes: Halved all the neurons in the CNN
+
+130718-02
+Training_batch_size = 20
+Validation_batch_size = 20
+Training_steps = 96
+Validation_steps = 18
+Epochs = 15
+Model: CNN
+Other: SigComp11
+Training_loss: 0.2582
+Validation_loss: 3.6653
+Training_acc: 0.8888
+Validation_acc: 0.3861
+Notes: 1/4 of the original amount of neurons in the CNN
+
+130718-03
+Training_batch_size = 20
+Validation_batch_size = 20
+Training_steps = 96
+Validation_steps = 18
+Epochs = 15
+Model: test
+Other: SigComp11
+Training_loss: 0.6498
+Validation_loss: 0.7891
+Training_acc: 0.6619
+Validation_acc: 0.3389
+Notes: 
+
+130718-04
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = 2
+Validation_steps = 2
+Epochs = 30
+Model: CNN
+Other: 021
+Training_loss: 0.0873
+Validation_loss: 0.8528
+Training_acc: 0.9583
+Validation_acc: 0.7500
+Notes: 
+
+130718-05
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = 2
+Validation_steps = 2
+Epochs = 30
+Model: CNN
+Other: 021
+Training_loss: 0.0036
+Validation_loss: 0.3174
+Training_acc: 1.0000
+Validation_acc: 0.9167
+Notes: Half amount of filters + no dropout
+
+130718-06
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = 2
+Validation_steps = 2
+Epochs = 30
+Model: CNN
+Other: 021
+Training_loss: 0.0145
+Validation_loss: 0.2820
+Training_acc: 1.0000
+Validation_acc: 0.9583
+Notes: Half amount of filters + dropout
+
+130718-07
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = 2
+Validation_steps = 2
+Epochs = 30
+Model: CNN
+Other: 021
+Training_loss: 0.0071
+Validation_loss: 0.2056
+Training_acc: 1.0000
+Validation_acc: 0.9167
+Notes: Half amount of filters + no dropout
+
+130718-08
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = 2
+Validation_steps = 2
+Epochs = 50
+Model: CNN
+Other: 021
+Training_loss: 0.0737
+Validation_loss: 0.3613
+Training_acc: 0.9583
+Validation_acc: 0.9167
+Notes: 1/4 amount of filters + dropout

@@ -9,24 +9,24 @@ def create_model():
 
     # First convolution extracts 16 filters that are 3x3
     # Convolution is followed by max-pooling layer with a 2x2 window
-    x = layers.Conv2D(16, 3, activation='relu')(img_input)
+    x = layers.Conv2D(2, 3, activation='relu')(img_input)
     x = layers.MaxPooling2D(2)(x)
 
     # Second convolution extracts 32 filters that are 3x3
     # Convolution is followed by max-pooling layer with a 2x2 window
-    x = layers.Conv2D(32, 3, activation='relu')(x)
+    x = layers.Conv2D(4, 3, activation='relu')(x)
     x = layers.MaxPooling2D(2)(x)
 
     # Third convolution extracts 64 filters that are 3x3
     # Convolution is followed by max-pooling layer with a 2x2 window
-    x = layers.Conv2D(64, 3, activation='relu')(x)
+    x = layers.Conv2D(8, 3, activation='relu')(x)
     x = layers.MaxPooling2D(2)(x)
 
     # Flatten feature map to a 1-dim tensor so we can add fully connected layers
     x = layers.Flatten()(x)
 
     # Create a fully connected layer with ReLU activation and 512 hidden units
-    x = layers.Dense(512, activation='relu')(x)
+    x = layers.Dense(8, activation='relu')(x)
 
     # Add a dropout rate of 0.5
     x = layers.Dropout(0.5)(x)

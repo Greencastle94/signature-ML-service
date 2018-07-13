@@ -35,11 +35,11 @@ def evaluate(history):
     plt.show()
 
 def main():
-    batch_size = 50
-    epochs = 10
-    train_steps = 1933//batch_size  # steps = 1933 images / batch_size
-    val_steps = 362//batch_size     # steps = 362 images / batch_size
-    author = 'SigComp11'            # Which dataset to use
+    batch_size = 12
+    epochs = 50
+    train_steps = 24//batch_size  # steps = 1933 images / batch_size
+    val_steps = 24//batch_size     # steps = 362 images / batch_size
+    author = '029'            # Which dataset to use
 
     print('batch_size: ' + str(batch_size))
     print('train_steps: ' + str(train_steps))
