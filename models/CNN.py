@@ -1,6 +1,6 @@
 from tensorflow.python.keras import layers
 from tensorflow.python.keras.models import Model
-from tensorflow.python.keras.optimizers import RMSprop
+from tensorflow.python.keras.optimizers import *
 
 def create_model():
     # Our input feature map is 150x150x3: 150x150 for the image pixels, and 3 for
@@ -9,24 +9,24 @@ def create_model():
 
     # First convolution extracts 16 filters that are 3x3
     # Convolution is followed by max-pooling layer with a 2x2 window
-    x = layers.Conv2D(2, 3, activation='relu')(img_input)
+    x = layers.Conv2D(1, 3, activation='relu')(img_input)
     x = layers.MaxPooling2D(2)(x)
 
     # Second convolution extracts 32 filters that are 3x3
     # Convolution is followed by max-pooling layer with a 2x2 window
-    x = layers.Conv2D(4, 3, activation='relu')(x)
+    x = layers.Conv2D(2, 3, activation='relu')(x)
     x = layers.MaxPooling2D(2)(x)
 
     # Third convolution extracts 64 filters that are 3x3
     # Convolution is followed by max-pooling layer with a 2x2 window
-    x = layers.Conv2D(8, 3, activation='relu')(x)
+    x = layers.Conv2D(4, 3, activation='relu')(x)
     x = layers.MaxPooling2D(2)(x)
 
     # Flatten feature map to a 1-dim tensor so we can add fully connected layers
     x = layers.Flatten()(x)
 
     # Create a fully connected layer with ReLU activation and 512 hidden units
-    x = layers.Dense(8, activation='relu')(x)
+    x = layers.Dense(32, activation='relu')(x)
 
     # Add a dropout rate of 0.5
     x = layers.Dropout(0.5)(x)

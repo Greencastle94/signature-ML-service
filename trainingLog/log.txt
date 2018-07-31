@@ -319,3 +319,115 @@ Validation_loss: 0.3613
 Training_acc: 0.9583
 Validation_acc: 0.9167
 Notes: 1/4 amount of filters + dropout
+
+300718-01
+Training_batch_size = 6
+Validation_batch_size = 6
+Training_steps = 5
+Validation_steps = 1
+Epochs = 50
+Model: CNN
+Other: 029 (new)
+Training_loss: 0.2654
+Validation_loss: 0.4435
+Training_acc: 0.8268
+Validation_acc: 0.6667
+Notes: Model 1-2-4-F-32-D-16-D-1
+
+300718-02
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = 2
+Validation_steps = 2
+Epochs = 50
+Model: CNN
+Other: 021
+Training_loss: 0.0877
+Validation_loss: 0.2434
+Training_acc: 0.9583
+Validation_acc: 0.9167
+Notes: 1-2-4-F-32-D-1
+
+310718-01
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = (Self calculated)
+Validation_steps = (Self calculated)
+Epochs = 50
+Model: CNN
+Other: 029-test
+Training_loss: 0.1229
+Validation_loss: 0.2462
+Training_acc: 0.9414
+Validation_acc: 1.0000
+Notes: 
+
+310718-02
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = (Self calculated)
+Validation_steps = (Self calculated)
+Epochs = 50
+Model: CNN
+Other: 024-test
+Training_loss: 0.4241
+Validation_loss: 0.5133
+Training_acc: 0.8625
+Validation_acc: 0.5000
+Notes: 
+
+310718-03
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = (Self calculated)
+Validation_steps = (Self calculated)
+Epochs = 50
+Model: CNN
+Other: 021-test
+Training_loss: 0.2413
+Validation_loss: 0.4130
+Training_acc: 0.9417
+Validation_acc: 0.8333
+Notes: 
+
+310718-04
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = (Self calculated)
+Validation_steps = (Self calculated)
+Epochs = 50
+Model: CNN
+Other: 029
+Training_loss: 0.0405
+Validation_loss: 1.4254
+Training_acc: 1.0000
+Validation_acc: 0.7083
+Notes: 
+
+310718-05
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = (Self calculated)
+Validation_steps = (Self calculated)
+Epochs = 50
+Model: CNN
+Other: 024
+Training_loss: 0.1711
+Validation_loss: 0.3980
+Training_acc: 0.9583
+Validation_acc: 0.8750
+Notes: 
+
+310718-06
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = (Self calculated)
+Validation_steps = (Self calculated)
+Epochs = 50
+Model: CNN
+Other: 021
+Training_loss: 0.6542
+Validation_loss: 0.6633
+Training_acc: 0.7083
+Validation_acc: 0.5000
+Notes: 

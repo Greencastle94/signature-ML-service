@@ -1,0 +1,63 @@
+1.  Ladda ner och installera Python (64-bit)
+
+2.  Genom kommandotolken (cmd på windows) byt mapp till python Scripts
+    - cd "mappen/där/python/finns"/Scripts
+
+3.  Använd PIP för att ladda ner och installera alla moduler/dependencies
+    - pip install "modulen"
+
+4.  I kommandotolken, byt mapp till projekt-mappen
+
+5.  I sigrecog-filen kan du ändra dataset att testköra med genom att byta
+    namnet i author-variabeln i main-funktionen.
+
+6.  Kör programmet i kommandotolken
+    - python sigrecog.py
+
+#######################################################################
+
+Det finns flera olika dataset men det är främst dom med nummer jag hållit på
+med senast då det är individuella personers signaturer.
+Testa alltså med 021, 024 eller 029. Det är alltså data för tre olika personer.
+
+De med endast siffror är bara dataseten tagna från github-projektet. De som
+heter samma siffra fast med avslutande ""-test" i titeln är från samma person
+men tagna från SigComp11-datasetet. Det verkade finnas fler signaturer från
+github-projektet än från original-datan så jag misstänker att det finns kopior
+vilket kan störa inlärningen. I senaste körningen jag gjorde visade det sig att
+"xx-test" gav bättre resultat.
+
+VAD JAG GJORT
+#######################################################################
+Det allra första jag började med var att sätta mig in i maskininlärning, teori
+och hur man praktiskt tillämpar det. Fullgjorde därför Google Machine Learning
+Crash Course för att få lite kött på benen.
+
+Nästa steg i projektet var att sätta mig in i github-projektet jag fick länkat.
+När jag testkörde fick jag alltid 50 % träffsäkerhet, vilket är som att
+gissa så det dög inte. Eftersom alla algoritmer var "självskrivna" av personen
+så var det komplicerat att förstå hur och var man skulle ändra för att finslipa
+modellen. Efter ett tag valde jag att börja om från scratch och göra en egen
+maskininlärningsmodell med hjälp av Tensorflow.
+
+När jag hade fått upp en modell och ett program som fungerade att köra så var
+nästa utmaning att finslipa den så att träffsäkerheten ökade. Det betydde att
+jag fick researcha om olika typer modeller/arkitekturer som skulle vara
+för den här uppgiften samt hur man finjusterar den för att göra den bättre.
+Filerna i models-mappen är de olika modeller jag testat men CNN var den som
+fungerade bäst.
+
+Dock försökte jag länge öka träffsäkerheten i en modell som skulle klassificera
+nya personers signaturer som den aldrig sett tidigare. För det använde jag mig
+av SigComp11-datasetet. Hur jag än gjorde lyckades jag aldrig uppnå högre än
+ca 35 %. Det var då jag insåg att uppgiften skulle kunna vara att man tidigare
+matat in data för viss person och att ML-modellen då ska kunna verifiera dennes
+signatur. Det var en lite lättare uppgift och då började jag jobba med
+individuella personers signaturer ur SigComp11-datasetet. Direkt började jag
+uppnå en träffsäkerhet mellan 60-70 % då.
+
+Avslutningsvis har jag bara försökt öka precisionen av modellen vilket betytt
+flera olika körningar där jag ändrat parametrar eller tagit bort eller lägt till
+nya lager och ser vad som händer av resultatet.
+
+//Lucas
