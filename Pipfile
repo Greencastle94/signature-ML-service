@@ -9,6 +9,7 @@ scipy = "*"
 pillow = "*"
 tensorflow = "*"
 matplotlib = "*"
+requests = "*"
 
 [dev-packages]
 
