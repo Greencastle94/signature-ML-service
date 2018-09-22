@@ -11,10 +11,11 @@
 
 ## Dependencies
 - Python 3.x (x64)
-- Tensorflow
-- Numpy
-- SciPy
-- Pillow
+- tensorflow
+- numpy
+- sciPy
+- pillow
+- matplotlib
 
 ## Dataset
 The dataset used was gotten from the ICDAR 2011 Signature Verification Competition (SigComp2011).

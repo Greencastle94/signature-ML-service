@@ -42,7 +42,7 @@ maskininlärningsmodell med hjälp av Tensorflow.
 
 När jag hade fått upp en modell och ett program som fungerade att köra så var
 nästa utmaning att finslipa den så att träffsäkerheten ökade. Det betydde att
-jag fick researcha om olika typer modeller/arkitekturer som skulle vara
+jag fick researcha om olika typer modeller/arkitekturer som skulle vara bra
 för den här uppgiften samt hur man finjusterar den för att göra den bättre.
 Filerna i models-mappen är de olika modeller jag testat men CNN var den som
 fungerade bäst.
@@ -57,7 +57,7 @@ individuella personers signaturer ur SigComp11-datasetet. Direkt började jag
 uppnå en träffsäkerhet mellan 60-70 % då.
 
 Avslutningsvis har jag bara försökt öka precisionen av modellen vilket betytt
-flera olika körningar där jag ändrat parametrar eller tagit bort eller lägt till
+flera olika körningar där jag ändrat parametrar eller tagit bort eller lagt till
 nya lager och ser vad som händer av resultatet.
 
 //Lucas
