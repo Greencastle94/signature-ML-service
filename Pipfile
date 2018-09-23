@@ -4,12 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-numpy = "*"
-scipy = "*"
-pillow = "*"
+requests = "*"
 tensorflow = "*"
 matplotlib = "*"
-requests = "*"
+pillow = "*"
+scipy = "*"
 
 [dev-packages]
 
