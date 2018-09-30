@@ -1,18 +1,19 @@
-1.  Ladda ner och installera Python (64-bit)
+#UPPDATERAD (30/9-18)
+1.  Ladda ner och installera Python 3.6 (64-bit)
 
 2.  Genom kommandotolken (cmd på windows) byt mapp till python Scripts
     - cd "mappen/där/python/finns"/Scripts
 
-3.  Använd PIP för att ladda ner och installera alla moduler/dependencies
-    - pip install "modulen"
+3.  Använd PIP för att ladda ner och installera pipenv (vilket också använder sig av virtualenv)
+    - pip install --user pipenv
 
 4.  I kommandotolken, byt mapp till projekt-mappen
 
-5.  I sigrecog-filen kan du ändra dataset att testköra med genom att byta
-    namnet i author-variabeln i main-funktionen.
+5.  Kör nedanstående kommando för att installera alla moduler som krävs
+    - pipenv install
 
 6.  Kör programmet i kommandotolken
-    - python sigrecog.py
+    - pipenv run python sigrecog.py
 
 #######################################################################
 
@@ -26,6 +27,10 @@ men tagna från SigComp11-datasetet. Det verkade finnas fler signaturer från
 github-projektet än från original-datan så jag misstänker att det finns kopior
 vilket kan störa inlärningen. I senaste körningen jag gjorde visade det sig att
 "xx-test" gav bättre resultat.
+
+#UPPDATERAD (9/30-18)
+Nu gäller datasetet new vilket jämför de tidigare genuina signatur-bilderna mot
+slumpmässiga bilder (som inte visar signaturer) jag hittat på nätet.
 
 VAD JAG GJORT
 #######################################################################
@@ -59,5 +64,13 @@ uppnå en träffsäkerhet mellan 60-70 % då.
 Avslutningsvis har jag bara försökt öka precisionen av modellen vilket betytt
 flera olika körningar där jag ändrat parametrar eller tagit bort eller lagt till
 nya lager och ser vad som händer av resultatet.
+
+#UPPDATERAD (9/30-18)
+- Läste på och installerade virtualenv via pipenv som ska vara det officiellt
+  rekommenderade modulhanterar-verktyget.
+- Sökte på bilder genom lite halvt slumpmässiga ord och laddade ner dessa.
+  Skapade sedan ett nytt dataset med dessa bilder som den falska motsvarigheten
+  mot de tidigare använda signatur-bilderna. Körde programmet en gång och fick
+  direkt 99 % träffsäkerhet på validerings-datasetet.
 
 //Lucas

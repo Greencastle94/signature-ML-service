@@ -2,20 +2,17 @@
 
 
 ## Setup
-1. Download & install Python
-2. Download & install all the dependencies
-3. Run sigrecog.py
+1. Download & install Python 3.6
+2. pip install --user pipenv
+3. pipenv install
+4. In project directory run: pipenv run python sigrecog.py
 
-## Built with
-- Tensorflow
-
-## Dependencies
-- Python 3.x (x64)
+## Modules
+- Python 3.6 (x64)
 - tensorflow
-- numpy
-- sciPy
-- pillow
 - matplotlib
+- pillow
+- sciPy
 
 ## Dataset
 The dataset used was gotten from the ICDAR 2011 Signature Verification Competition (SigComp2011).
