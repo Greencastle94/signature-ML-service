@@ -431,3 +431,17 @@ Validation_loss: 0.6633
 Training_acc: 0.7083
 Validation_acc: 0.5000
 Notes: 
+
+300918-01
+Training_batch_size = 12
+Validation_batch_size = 12
+Training_steps = (Self calculated)
+Validation_steps = (Self calculated)
+Epochs = 50
+Model: CNN
+Dataset: new
+Training_loss: 0.0015
+Validation_loss: 0.0201
+Training_acc: 1.0000
+Validation_acc: 0.9960
+Notes: Compared signatures against random images of NOT signatures

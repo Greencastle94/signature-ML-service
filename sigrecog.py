@@ -35,29 +35,29 @@ def evaluate(history):
     plt.show()
 
 def main():
-    author = '021'            # Which dataset to use
+    dataset = 'new'            # Which dataset to use
     batch_size = 12
     epochs = 50
 
     model = net.create_model()
 
     current_dir = os.path.dirname(__file__)
-    training_dir = os.path.join(current_dir, 'datasets/', author, 'training/')
-    validation_dir = os.path.join(current_dir, 'datasets/', author, 'validation/')
+    training_dir = os.path.join(current_dir, 'datasets/', dataset, 'training/')
+    validation_dir = os.path.join(current_dir, 'datasets/', dataset, 'validation/')
 
     # Calculate training & validation steps
     num_images = 0
-    for folder in ['genuine/', 'forged/']:
+    for folder in ['true/', 'false/']:
         dir = os.path.join(training_dir, folder)
         num_images += len(os.listdir(dir))
     train_steps = num_images/batch_size
     num_images = 0
-    for folder in ['genuine/', 'forged/']:
+    for folder in ['true/', 'false/']:
         dir = os.path.join(validation_dir, folder)
         num_images += len(os.listdir(dir))
     val_steps = num_images/batch_size
 
-    print('Dataset: ' + author)
+    print('Dataset: ' + dataset)
     print('batch_size: ' + str(batch_size))
     print('train_steps: ' + str(train_steps))
     print('val_steps: ' + str(val_steps))
