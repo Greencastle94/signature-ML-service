@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 requests = "*"
-tensorflow = "==1.10.0"
+tensorflow = "==1.15.2"
 matplotlib = "*"
 pillow = "*"
 scipy = "*"
